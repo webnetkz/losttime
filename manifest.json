@@ -1,28 +1,26 @@
 {
     "manifest_version": 2,
-    "name": "Lost Time",
+    "name": "Lost Time My",
     "version": "1.0",
     
     "icons": {
-      "128": ""
+      "128": "losttime/logo.png"
     },
     "content_scripts": [
       {
-        "matches": [ "*://*/*" ],
-        "js": [ "content.js" ]
+        "matches": [ "<all_urls>" ],
+        "js": [ "losttime/content.js" ]
       }
     ],
-    "background": {
-      "scripts": ["background.js"]
-    },
+
     "permissions": [
-      "http://losttime.su/*"
+      "https://google.com/*"
     ],
   
         "browser_action": {
           "default_title": "LostTime",
-          "default_icon": "",
-          "default_popup": "popup.html"
+          "default_icon": "losttime/logo.png",
+          "default_popup": "losttime/popup.html"
       }
       
   }
